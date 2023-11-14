@@ -1,4 +1,6 @@
 Getting Git is legit
 Add another line
+Added additional lines
+Need to commit
 
 
