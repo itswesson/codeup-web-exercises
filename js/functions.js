@@ -1,5 +1,6 @@
 "use strict";
 
+console.log("Inside functions.js");
 
 /**
  * TODO:
@@ -9,10 +10,23 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-// function sayHello(name) {
-//     return "Hello, " + name + "!";
+
+// DONE  Create a function called 'sayHello'
+// DONE  takes a parameter 'name'
+// DONE  should return a message
+// DONE  that says hello to the passed in name.
+
+
+// Both of these are correct:
+
+// const sayHello = (name) => {
+//     return `Hello, ${name}!`;
 // }
-// console.log(sayHello("codeup"))
+
+function sayHello(name) {
+    return `Hello, ${name}`;
+}
+
 
 /**
  * TODO:
@@ -22,10 +36,13 @@
  * console.log 'helloMessage' to check your work
  */
 
-function sayHello(name) {
-    return "Hello, " + name + "!";
-}
-console.log(sayHello("Eddie"))
+// DONE  Call the function 'sayHello'
+// DONE  pass your name as a string literal argument.
+// DONE  Store the result in a variable named 'helloMessage'
+// DONE  console.log 'helloMessage' to check your work
+
+const helloMessage = sayHello('Steve');
+console.log(helloMessage);
 
 
 /**
@@ -35,16 +52,26 @@ console.log(sayHello("Eddie"))
  * console.
  */
 
-let myName = "Doug"
-function sayHello(myName) {
-    return "Hello, " + myName + "!"
-}
-    console.log(sayHello(myName))
+
+// DONE  Store your name as a string in a variable named 'myName'
+// DONE  pass that variable to the 'sayHello' function.
+// DOME  output in the console.
+
+const myName = "Steve";
+
+// These two are the same
+
+// const secondHelloMessage = sayHello(myName);
+// console.log(secondHelloMessage);
+
+console.log(sayHello(myName));
+
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 const random = Math.floor((Math.random() * 3) + 1);
+console.log(random);
 
 /**
  * TODO:
@@ -64,35 +91,28 @@ const random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(number) {
-  return number === 2;
+
+// DONE  Create a function called 'isTwo'
+// DONE  takes a number as a parameter
+// DONE  function should return a boolean value
+// DONE  based on whether or not the passed number is the number 2
+// DONE  Call the function 'isTwo'
+// DONE  passing the variable 'random' as an argument
+// DONE  console.log *outside of the function* to check your work
+
+// Arrow Function one liner:
+// const isTwo = (num) => num === 2;
+
+function isTwo(num) {
+    return num === 2; // boolean value
 }
-console.log(random);
+
 console.log(isTwo(random));
 
-function isSeven(number) {
-    return number === 7;
-}
-// console.log((isSeven(9)))
+// Testing difference between double and triple equals
+// console.log(isTwo('2'));
+// console.log(isTwo(2));
 
-function doubleIt(number) {
-    return number * 2;
-}
-// console.log(doubleIt(4))
-
-function minusThree(number) {
-    return number - 3
-}
-// console.log(minusThree(7))
-
-function greaterThan(number) {
-    return number >= 5
-}
-// console.log(greaterThan(9))
-function myTip(number) {
-    return number * .20
-}
-// console.log(myTip(43.55))
 
 /**
  * TODO:
@@ -105,16 +125,33 @@ function myTip(number) {
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-// Create a function named 'calculateTip'
-// function should accept a tip percentage and the total of the bill
-// return the amount to tip
+
+// DONE  Create a function named 'calculateTip'
+// DONE  the function should accept a tip percentage and the total of the bill
+// DONE  return the amount to tip
+
+// Arrow Function one liner:
+// const calculateTip = (tipPercent, billTotal) => (tipPercent * billTotal).toFixed(2);
 
 function calculateTip(tipPercent, billTotal) {
-    return tipPercent * billTotal
+    // These two are the same:
+
+    // return (tipPercent * billTotal).toFixed(2); // amount to tip
+
+    const tipTotal = tipPercent * billTotal;
+    return tipTotal.toFixed(2);
 }
-console.log(calculateTip(0.20, 20));
-console.log(calculateTip(0.25, 25.50));
-console.log(calculateTip(0.15, 33.42));
+
+
+// What the function would look like if we got whole numbers for tipPercent:
+// function calculateTip(tipPercent, billTotal) {
+//     return ((tipPercent / 100) * billTotal).toFixed(2);
+// }
+
+console.log(calculateTip(0.20, 20)); // returns 4
+console.log(calculateTip(0.25, 25.50)); // returns 6.375
+console.log(calculateTip(0.15, 33.42)); // returns 5.013
+
 
 
 /**
@@ -124,15 +161,15 @@ console.log(calculateTip(0.15, 33.42));
  * then display the dollar amount they should tip
  */
 
-// prompt user for bill total
-// prompt user for tip percentage
-// use calculateTip to get the total tip amount
-// alert user with total tip amount
+// DONE  prompt user for bill total
+// DONE  prompt user for tip percentage
+// DONE  use calculateTip to get the total tip amount
+// DONE  alert user with total tip amount
 
-const userBillTotal = prompt("Enter the total bill cost")
-const userTipPercent = prompt("Enter the percent you would like to tip")
-const
-
+// const userBillTotal = prompt("Enter your total bill cost");
+// const userTipPercent = prompt("Enter the percent you would like to tip");
+// const totalTipAmount = calculateTip(userTipPercent, userBillTotal);
+// alert(`The amount you should tip is: $${totalTipAmount}`);
 
 
 
@@ -150,19 +187,26 @@ const
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-//create a function named "applyDiscount"
-// accept a price (before discount is applied)
-// and accept a discount percentage (a number between 0 and 1)
-// It should return
-// result of applying the discount to the original price
+
+
+// DONE  Create a function named `applyDiscount`
+// DONE  accept a price (before a discount is applied),
+// DONE  and accept a discount percentage (a number between 0 and 1)
+// DONE  It should return
+// DONE  result of applying the discount to the original price.
 
 const applyDiscount = (priceBeforeDiscount, discountPercent) => {
-    return priceBeforeDiscount - (priceBeforeDiscount * discountPercent);
+    return (priceBeforeDiscount - (priceBeforeDiscount * discountPercent)).toFixed(2);
 }
 
-let originalPrice = 100
-let discountPercent = .20 // 20%
+
+let originalPrice = 100;
+let discountPercent = .2; // 20%
 console.log(applyDiscount(originalPrice, discountPercent)); // 80
 
-**See Steves work/walkthrough on Github // jackalope webexercises repo**
+console.log(applyDiscount(45.99, 0.12));
+
+
+
+
 
