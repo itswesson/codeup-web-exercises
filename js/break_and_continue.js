@@ -1,9 +1,14 @@
-function promptUser() {
+console.log("Inside break_and_continue.js")
+
+function promptUser1to50() {
     let userNumber;
 
     do {
+        // prompt the user
         userNumber = prompt("Give me an odd number between 1 and 50?");
+        // check users answer
         if (userNumber >= 1 && userNumber <= 50 && userNumber % 2 !== 0) {
+            // users input is invalid
             break;
         } else {
             alert("Invalid input. Please enter a valid odd number between 1 and 50.");
@@ -21,4 +26,4 @@ function promptUser() {
     }
 }
 
-promptUser();
+promptUser1to50();

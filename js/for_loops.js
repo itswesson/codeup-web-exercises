@@ -22,28 +22,29 @@ console.log("Inside Loops.js")
 // console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
 // For example, showMultiplicationTable(7) should output times table 1-10
 
-function showMultiplicationTable(number) {
-    for (let i = 1; i <= 10; i++) {
-        let result = number * i;
-        console.log(number + " * " + i + " = " + result);
-    }
-}
-
-showMultiplicationTable(5)
+// function showMultiplicationTable(number) {
+//     for (let i = 1; i <= 10; i++) {
+//         let result = number * i;
+//         console.log(number + " * " + i + " = " + result);
+//     }
+// }
+//
+// showMultiplicationTable(5)
 
 
 // Exercise #3
 // Use a for loop and the code from the previous lessons to generate 10 random numbers
 // between 20 and 200 and output to the console whether each number is odd or even.
 
-for (let i = 0; i < 10; i++) {
-    let randomNumber = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
-    if (randomNumber % 2 === 0) {
-        console.log(randomNumber + " is even.");
-    } else {
-        console.log(randomNumber + " is odd.");
-    }
-}
+// for (let i = 0; i < 10; i++) {
+//     let randomNumber = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
+//             console.log(randomNumber)
+//     if (randomNumber % 2 === 0) {
+//         console.log(randomNumber + " is even.");
+//     } else {
+//         console.log(randomNumber + " is odd.");
+//     }
+// }
 
 
 
@@ -54,14 +55,35 @@ for (let i = 0; i < 10; i++) {
 //333
 //4444
 //55555
-
-for (let i = 1; i <= 9; i++) {
-    let output = '';
-    for (let j = 1; j <= i; j++) {
-        output += i;
-    }
-    console.log(output);
+//
+// for (let i = 1; i <= 9; i++) {
+//     let output = '';
+//     for (let j = 1; j <= i; j++) {
+//         output += i;
+//     }
+//     console.log(output);
+// }
+// Steves way of answering this exercise
+function logPyramid(){
+//     for (let i = 1; i < 10; i++) {
+//         let line = "";
+//         for (let j = 0; j < i; j++) {
+//             line += i;
+//         }
+//         console.log(line);
+//     }
 }
+// logPyramid();
+
+
+// Tianas version
+    for(let i = 1; i < 10; i++) {
+        let newI = i.toString();
+        console.log(newI.repeat(i));
+        // console.log(i.toString().repeat(i));
+    }
+
+logPyramid();
 
 //Exercise #5
 // Create a for loop that uses console.log to create the output shown below.
@@ -75,9 +97,9 @@ for (let i = 1; i <= 9; i++) {
 // 15
 // 10
 // 5
-
-for (let i = 100; i >= 5; i -= 5) {
-    console.log(i)
+function decrementByFive() {
+    for (let i = 100; i >= 5; i -= 5) {
+        console.log(i)
+    }
 }
-
-
+decrementByFive()
