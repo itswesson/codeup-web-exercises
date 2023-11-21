@@ -19,7 +19,12 @@ console.log("Inside Challenges")
 // band.genre = "Metal";
 // console.log(genre)
 //
+//
+// for (var i = 0; i <= 10; i++) {
+//     console.log(i);
+// }
 
-for (var i = 0; i <= 10; i++) {
-    console.log(i);
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
