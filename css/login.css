@@ -19,7 +19,7 @@ form {
 
 fieldset {
     padding: 1em;
-    background-color: white;
+    background-color: #FFFFFF;
     border: none;
     -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
@@ -55,7 +55,7 @@ fieldset {
 
 .btn {
     padding: 8px;
-    color: white;
+    color: #FFFFFF;
     font-weight: bold;
     border: 1px solid lightgrey;
     /* There must be a separation of 8px between the text and the border of this element */
