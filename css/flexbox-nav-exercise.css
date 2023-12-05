@@ -6,7 +6,7 @@ body {
 
 }
 nav {
-    background: grey;
+    background: lightgray;
 
 }
 ul {
@@ -15,16 +15,17 @@ ul {
     margin: 0;
     display: flex;
     flex-direction: row;
+    font-weight: bold;
 }
 nav a {
     text-decoration: none;
-    color: white;
-    font-family: Verdana;
+    color: black;
+    font-family: Arial;
     display: inline-block;
     padding: 1em;
 }
 nav a:hover {
-    background: black;
+    background: blue;
 }
 nav ul li:nth-child(5) {
     /*
