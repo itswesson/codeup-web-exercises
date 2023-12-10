@@ -1,6 +1,8 @@
 .navbar-expand{
-    -sm|-md|-lg|-xl|-xxl
+    -sm|-md|-lg|-xl|-xxl;
+    display: flex;
 }
 
 .jumbotron {
 }
+
